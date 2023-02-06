@@ -23,15 +23,21 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+	position: sticky;
 }
   
 li {
     float: right;
+    position: sticky;
+    border: 1px solid black;
 }
 
-img {
+li img {
     height: 100px;
     width: 100px;
+    top: 0px;
+    padding: 0px;
 }
   
 li a {
@@ -53,8 +59,9 @@ li a:hover {
 
 
 /*--------------------------------------
-|	          FOTO PROFILO			   |
+|	          LOGO      			   |
 ----------------------------------------*/
+
 
 /*--------------------------------------
 |	              Titles			   |
