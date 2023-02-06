@@ -1,0 +1,136 @@
+/*--------------------------------------
+|	             GENERAL			   |
+----------------------------------------*/
+* {
+    font-family: 'Berlin Sans FB Demi', 'Acumin Variable Concept';
+}
+
+body{
+	cursor: default;
+	background-color: rgb(115, 50, 56);
+  	color: white;
+    background-image: url('../images/background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* mantiene le corrette proporzioni senza strecciarla*/
+}
+
+/*--------------------------------------
+|	             NAVBAR				   |
+----------------------------------------*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+li {
+    float: right;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration-color: rgb(217, 105, 7);
+    text-decoration-thickness: 2px;
+    transition: 0.5s;
+}
+  
+li a:hover {
+    color: grey;
+    transition: 0.5s;
+}
+
+
+/*--------------------------------------
+|	          FOTO PROFILO			   |
+----------------------------------------*/
+
+/*--------------------------------------
+|	              Titles			   |
+----------------------------------------*/
+
+
+/*--------------------------------------
+|	            Timeline			   |
+----------------------------------------*/
+
+
+/*--------------------------------------
+|	             projects bar		   |
+----------------------------------------*/
+
+
+/*--------------------------------------
+|	            Esami			       |
+----------------------------------------*/
+
+
+/*--------------------------------------
+|	            Torna su			   |
+----------------------------------------*/
+
+
+/*--------------------------------------
+|	            change mode			   |
+----------------------------------------*/
+
+
+/*--------------------------------------
+|	              Footer			   |
+----------------------------------------*/
+footer{
+	height: 180px;	
+	bottom: 0;
+    left: 0;
+	width: 100%;
+	background-color: rgb(217, 166, 121);
+	color: black;
+    padding: 0px;
+	text-align: center;
+	position: fixed;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+footer:hover {
+    transition: 0.5s;
+    opacity: 1;
+}
+
+footer img{
+	transition: 1s;
+	opacity: 0.8;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+}
+footer img:hover{
+	transition: 1s;
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+footer a {
+    color: aliceblue;
+    text-decoration-color: rgb(217, 105, 7);
+    text-decoration-thickness: 2px;
+    transition: 0.5s;
+}
+footer a:hover {
+    color: grey;
+    transition: 0.5s;
+}
+/*--------------------------------------
+|	   Visualizzazione da telefono	   |
+----------------------------------------*/
