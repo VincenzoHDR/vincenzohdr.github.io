@@ -16,7 +16,7 @@ body{
 |	             NAVBAR				   |
 ----------------------------------------*/
 ul {
-    z-index: 1;
+    z-index: 10;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -33,10 +33,19 @@ li {
 }
 
 li img {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     top: 0px;
     position: absolute;
+    transition: 0.5s;
+}
+
+li img:hover {
+    height: 120px;
+    width: 120px;
+    top: 0px;
+    position: absolute;
+    transition: 0.5s;
 }
   
 li a {
@@ -64,8 +73,8 @@ li a:hover {
     position: absolute;
     top: 0px;
     right: 1px;
-    z-index: initial;
     width: 50%;
+    z-index: 0;
 }
 
 
@@ -132,34 +141,14 @@ li a:hover {
     font: small-caps bold 20px/1 sans-serif;
 }
 
-#preview_video table {
-    width: 50%;
-    background: rgb(217, 166, 121);
-}
-
-#preview_video #table1{
-    width: 20%;
-    border: solid white 1px;
-}
-
-#preview_video #table2 {
-    width: 50%;
+#preview_video b {
+    border: white;
+    border: 10px solid rgb(217, 105, 7);
     border-radius: 10px;
-}
-
-#preview_video #table1 td {
-    align-items: center;
+    color: white;
     text-align: center;
-    padding: 10px;
-}
-
-#preview_video #table2 td {
-    align-items: center;
-    text-align: center;
-    padding-top: 40px;
-    padding-right: 0px;
-    padding-bottom: 40px;
-    padding-left: 0px;
+    font-size: 20px;
+    background: rgb(217, 105, 7);
 }
 
 #preview_video iframe {
@@ -256,28 +245,21 @@ footer a:hover {
 |	   Visualizzazione da telefono	   |
 ----------------------------------------*/
 @media only screen and (max-width: 1400px) {
-	#preview_video iframe {
-        width: 550px;
-        height: 275px;
-    }
 }
 
 @media only screen and (max-width: 1200px) {
-	#preview_video iframe {
-        width: 500px;
-        height: 225px;
-    }
 }
 
 @media only screen and (max-width: 1100px) {
-	#preview_video iframe {
-        width: 300px;
-        height: 150px;
-    }
 
     li img {
         height: 100px;
         width: 100px;
+    }
+
+    li img:hover {
+        height: 120px;
+        width: 120px;
     }
 
     li a {
@@ -290,16 +272,15 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 720px) {
-	#preview_video iframe {
-        width: 200px;
-        height: 100px;
-    }
 
     li img {
         height: 80px;
         width: 80px;
-        top: 0px;
-        position: absolute;
+    }
+
+    li img:hover {
+        height: 100px;
+        width: 100px;
     }
 
     li a {
@@ -309,6 +290,11 @@ footer a:hover {
 
     #preview_video #table1{
         font-size: 10px;
+    }
+
+    #preview_video iframe {
+        width: 500px;
+        height: 250px;
     }
 }
 
@@ -325,13 +311,11 @@ footer a:hover {
     li img {
         height: 50px;
         width: 50px;
-        top: 0px;
-        position: absolute;
     }
-	
-    #preview_video iframe {
-        width: 200px;
-        height: 110px;
+
+    li img:hover {
+        height: 70px;
+        width: 70px;
     }
 
     #presentazione h2 {
@@ -345,13 +329,14 @@ footer a:hover {
     #presentazione img {
         width: 150px;
     }
+
+    #preview_video iframe {
+        width: 400px;
+        height: 200px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
-	#preview_video iframe {
-        width: 150px;
-        height: 75px;
-    }
 
     li a{
         padding: 4px;
@@ -361,8 +346,11 @@ footer a:hover {
     li img {
         height: 50px;
         width: 50px;
-        top: 0px;
-        position: absolute;
+    }
+
+    li img:hover {
+        height: 70px;
+        width: 70px;
     }
 
     #presentazione h2 {
@@ -372,14 +360,14 @@ footer a:hover {
     #presentazione img {
         width: 120px;
     }
+
+    #preview_video iframe {
+        width: 350px;
+        height: 175px;
+    }
 }
 
 @media only screen and (max-width: 436px) {
-	#preview_video iframe {
-        width: 150px;
-        height: 75px;
-    }
-
     #presentazione h2 {
         width: 250px;
     }
@@ -391,7 +379,13 @@ footer a:hover {
     #presentazione img {
         width: 110px;
     }
+
+    #preview_video iframe {
+        width: 300px;
+        height: 150px;
+    }
 }
+
 @media only screen and (max-width: 376px) {
 	li a{
         padding: 4px;
@@ -401,8 +395,11 @@ footer a:hover {
     li img {
         height: 30px;
         width: 30px;
-        top: 0px;
-        position: absolute;
+    }
+
+    li img:hover {
+        height: 50px;
+        width: 50px;
     }
 
     #presentazione h2 {
@@ -415,5 +412,10 @@ footer a:hover {
 
     #presentazione img {
         width: 100px;
+    }
+
+    #preview_video iframe {
+        width: 250px;
+        height: 125px;
     }
 }
