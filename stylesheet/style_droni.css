@@ -1,0 +1,52 @@
+.drones {
+    align-content: center;
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+    position: inherit;
+    position: relative;
+    z-index: 1;
+}
+
+.drones table {
+    border-radius: 10px;
+    background-color: rgb(131, 58, 65);
+    table-layout: fixed;
+}
+
+.drones td {
+    padding: 15px;
+}
+
+.drones img {
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+@media (min-width: 900px) {
+    .drones table {
+        display: block;
+    }
+}
+
+.drones b {
+    color: rgb(107, 183, 191);
+    font-size: 30px;
+}
+
+.button-scheda-tecnica {
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #348EFE;
+    display: inline-block;
+    margin: 25px 0;
+    padding: 15px 35px;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+}
+
+.button-scheda-tecnica:hover,
+.button-scheda-tecnica:focus {
+    background-color: #e1f1ff;
+}
