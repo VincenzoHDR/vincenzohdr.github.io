@@ -22,6 +22,9 @@
     width: 100%;
     height: auto;
     z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 @media (min-width: 900px) {
@@ -49,4 +52,47 @@
 .button-scheda-tecnica:hover,
 .button-scheda-tecnica:focus {
     background-color: #e1f1ff;
+}
+
+.drones p {
+    text-align: center;
+}
+
+
+
+
+/* per far andare l'immagine del drone in alto quando lo schermo si rimpicciolisce */
+.drones table {
+    width: 100%;
+}
+.drones th,
+.drones td {
+    text-align: left;
+    padding: 8px;
+}
+@media (max-width: 1000px) {
+    .drones table {
+        display: block;
+    }
+    .drones tr {
+        display: block;
+    }
+    .drones td {
+        display: block;
+        border: none;
+        position: relative;
+    }
+    .drones td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    .drones img {
+        width: 80%;
+        padding: 20px;
+    }
+    
 }
