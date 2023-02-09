@@ -39,14 +39,14 @@
 }
 
 .button-scheda-tecnica {
-    border: 1px solid #9dd1ff;
+    border: 1px solid rgb(107, 183, 191);
     border-radius: 10px;
-    color: #348EFE;
+    color: rgb(107, 183, 191);
     display: inline-block;
     margin: 25px 0;
     padding: 15px 35px;
     text-decoration: none;
-    transition: all 150ms ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .button-scheda-tecnica:hover,
