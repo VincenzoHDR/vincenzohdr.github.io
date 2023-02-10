@@ -50,19 +50,13 @@
 
 
 
-<!--https://codepen.io/wunnle/pen/ZLomgG/-->
-<div class="gallery">
-    <div class="img-w"><img src="../images/gallery/image1.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image2.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image3.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image4.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image5.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image6.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image7.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image8.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image9.jpg" alt="" /></div>
-    <div class="img-w"><img src="../images/gallery/image10.jpg" alt="" /></div>
-</div>
+<div class="grid">
+    <div class="item" style="background-image: url(../images/gallery/image2.jpg)"></div>
+    <div class="item" style="background-image: url(../images/gallery/image1.jpg)"></div>
+    <div class="item" style="background-image: url(../images/gallery/image4.jpg)"></div>
+    <div class="item" style="background-image: url(../images/gallery/image5.jpg)"></div>  
+    <div class="item" style="background-image: url(../images/gallery/image3.jpg)"></div>
+  </div>
 
 
  <footer>
@@ -121,6 +115,7 @@
 	}) 
   })
   
+  // per farla tornare a posto
   $(document).on("click", ".img-c.active", function() {
 	let copy = $(this)
 	copy.removeClass("positioned active").addClass("postactive")
