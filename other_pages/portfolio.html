@@ -49,19 +49,20 @@
 </ul>
 
 
-<!--https://codepen.io/z-/pen/QmXOOR-->
-<center><div class="photoset -square -portrait"> <!--Can also do portrait or square, remove the "-" prefix-->
-    <!--Add or remove some of these-->
-    <a class="photo" style="background-image:url(../images/gallery/image1.jpg)" ></a>
-    <a class="photo" style="background-image:url(../images/gallery/image2.jpg)"></a>
-    <a class="photo" style="background-image:url(../images/gallery/image3.jpg)"></a>
-    <a class="photo" style="background-image:url(../images/gallery/image4.jpg)"></a>
-    <a class="photo" style="background-image:url(../images/gallery/image5.jpg)"></a>
-    <a class="photo" style="background-image:url(../images/gallery/image6.jpg)"></a>
-    <a class="photo" style="background-image:url(../images/gallery/image7.jpg)"></a>
-    <a class="photo" style="background-image:url(../images/gallery/image8.jpg)"></a>
-    <a class="photo" style="background-image:url(../images/gallery/image9.jpg)"></a>
- </div></center>
+
+<!--https://codepen.io/wunnle/pen/ZLomgG/-->
+<div class="gallery">
+    <div class="img-w"><img src="../images/gallery/image1.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image2.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image3.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image4.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image5.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image6.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image7.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image8.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image9.jpg" alt="" /></div>
+    <div class="img-w"><img src="../images/gallery/image10.jpg" alt="" /></div>
+</div>
 
 
  <footer>
@@ -88,6 +89,46 @@
         </tr>
     </table>
 </footer>
+
+<!--https://codepen.io/wunnle/pen/ZLomgG/-->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script>
+    $(function() {
+	$(".img-w").each(function() {
+	  $(this).wrap("<div class='img-c'></div>")
+	  let imgSrc = $(this).find("img").attr("src");
+	   $(this).css('background-image', 'url(' + imgSrc + ')');
+	})
+			  
+	
+	$(".img-c").click(function() {
+	  let w = $(this).outerWidth()
+	  let h = $(this).outerHeight()
+	  let x = $(this).offset().left
+	  let y = $(this).offset().top
+	  
+	  
+	  $(".active").not($(this)).remove()
+	  let copy = $(this).clone();
+	  copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
+	  $(".active").css('top', y - 8);
+	  $(".active").css('left', x - 8);
+	  
+		setTimeout(function() {
+	  copy.addClass("positioned")
+	}, 0)
+	  
+	}) 
+  })
+  
+  $(document).on("click", ".img-c.active", function() {
+	let copy = $(this)
+	copy.removeClass("positioned active").addClass("postactive")
+	setTimeout(function() {
+	  copy.remove();
+	}, 500)
+  })  
+</script>
 
 
 <!--Script per permettere l'hover on scroll-->

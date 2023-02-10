@@ -1,72 +1,63 @@
-/*https://codepen.io/z-/pen/QmXOOR*/
+/* https://codepen.io/wunnle/pen/ZLomgG/ */
+body {
+    padding: 30px 0;
+    position: relative;
+}
 
-    div.photoset {
-        padding: 2px;
-        background-color: #ffffff;
-        max-width: 700px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+.gallery {
+    width: 600px;
+    margin: auto;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 10;
+}
 
-    div.photoset .photo {
-        position: relative;
-        flex-grow: 1;
-        /*They will fill space but actually want to take up the smallest space possible doing it, so you just need to stop it getting too small with min-width (otherwise they all bunch on the same line) */
-        min-width: calc(100% / 3);
-        /*This is the maximum number (3) in a row bit */
-        background-size: cover;
-        background-position: center;
+.img-c {
+    width: 200px;
+    height: 200px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
 
-        @media screen and (max-width: 700px) {
-            min-width: calc(100% / 2);
-            /*As simple as this for responsiveness without a delay you would get with JavaScript*/
-        }
+.img-w {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform ease-in-out 300ms;
+}
 
-        @media screen and (max-width: 460px) {
-            min-width: 100%;
-        }
-    }
+.img-w img {
+    display: none;
+}
 
-    div.photoset .photo:after {
-        /*Aspect Ratio */
-        padding-top: 83.33333%;
-        /*For 5:6 height to width ratio */
-        display: block;
-        content: "";
-    }
+.img-c {
+    transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
+}
 
-    div.photoset .photo:before {
-        /*Gaps */
-        z-index: 2;
-        position: absolute;
-        content: "";
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        box-shadow: inset 0 0 0 2px #ffffff;
-        /*Cheaty way to make it look like there are gaps 😜 */
-    }
+.img-c:hover .img-w {
+    transform: scale(1.08);
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
 
-    div.photoset .photo:nth-child(1) {
-        /*Make first image big */
-        width: 100%;
-    }
+.img-c.active {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    z-index: 2;
+}
 
-    div.photoset.square .photo:after {
-        padding-top: 100%;
-    }
+.img-c.postactive {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+}
 
-    div.photoset.portrait .photo:after {
-        padding-top: 120%;
-    }
-
-    body {
-        overflow-y: scroll;
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
-    }
-/*-----------------------------------------------------------------------------------*/
+.img-c.active.positioned {
+    left: 0 !important;
+    top: 0 !important;
+    transition-delay: 50ms;
+}
