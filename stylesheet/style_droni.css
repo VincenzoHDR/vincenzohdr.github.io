@@ -34,14 +34,14 @@
 }
 
 .drones b {
-    color: rgb(107, 183, 191);
+    color: #60a9ff;
     font-size: 30px;
 }
 
 .button-scheda-tecnica {
-    border: 1px solid rgb(107, 183, 191);
+    border: 1px solid #60a9ff;
     border-radius: 10px;
-    color: rgb(107, 183, 191);
+    color: #60a9ff;
     display: inline-block;
     margin: 25px 0;
     padding: 15px 35px;

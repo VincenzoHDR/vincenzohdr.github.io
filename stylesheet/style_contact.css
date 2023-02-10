@@ -1,0 +1,63 @@
+.presentation_card {
+    padding: 10px;
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    z-index: 10;
+    position: relative; 
+}
+
+.presentation_card img{
+    max-width: 300px;
+    z-index: 1;
+    position: relative;
+}
+
+.box {
+    background: rgb(131, 58, 65);
+    margin-top: 0px; 
+    border-radius: 10px;
+    padding-top: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 60px;
+}
+
+.items {
+    border: solid black 1px;
+    border-radius: 15px;
+    
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    
+    transition: 0.5s;
+}
+
+.items a {
+    color: inherit;
+    text-decoration: inherit;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.items i {
+    float: right;
+    margin-right: 20px;
+}
+
+.items img {
+    float: left;
+    margin-left: 20px;
+    width: 40px;
+    height: auto;
+    position: absolute;
+}
+
+.items:hover {
+    background: rgb(145, 69, 76);
+    transition: 0.5s;
+}
