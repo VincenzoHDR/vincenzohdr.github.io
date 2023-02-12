@@ -1,9 +1,18 @@
 /*--------------------------------------
 |	             GENERAL			   |
 ----------------------------------------*/
-* {
-    font-family: "Fira Sans", sans-serif;
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+    
+    
 
 
 body{
@@ -204,26 +213,18 @@ footer{
 	position: static;
 	margin-top: 250px;
 	z-index: 1;
-    opacity: 0.8;
-    transition: 0.5s;
 }
-
-footer:hover {
-    transition: 0.5s;
-    opacity: 1;
-}
-
 footer img{
-	transition: 1s;
-	opacity: 0.8;
+    width: 310x;
+	transition: 0.5s;
+	opacity: 0.5;
 	position: relative;
 	max-width: 100%;
 	height: auto;
 }
 footer img:hover{
-	transition: 1s;
+	transition: 0.5s;
 	opacity: 1;
-	transform: scale(1.1);
 }
 
 footer a {
@@ -235,6 +236,16 @@ footer a {
 footer a:hover {
     color: grey;
     transition: 0.5s;
+}
+
+footer table {
+    margin-top: 15px;
+}
+
+footer table th {
+    border: none; 
+    width: 60px;
+    padding-left: 20px;
 }
 
 /*--------------------------------------

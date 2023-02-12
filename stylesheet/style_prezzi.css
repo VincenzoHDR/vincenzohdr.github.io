@@ -1,16 +1,5 @@
 /* https://codepen.io/travisw/pen/EvbKwd */
 
-html {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
 .container {
     margin: 0 auto;
     padding: 50px 0 0;
