@@ -1,7 +1,7 @@
 const loadVideo = (iframe) => {
-const cid = "UCADkQAwTR-phuUs1QDKflIg";
-const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
-const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+    const cid = "UCADkQAwTR-phuUs1QDKflIg";
+    const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
+    const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
 
     fetch(reqURL)
         .then(response => response.json())
